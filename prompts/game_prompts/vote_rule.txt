@@ -1,0 +1,2 @@
+Who do you think is the werewolf? Remember to base your decision on the game's progress, your role, and the discussions that have happened. Please format your answer like this: 
+'{Player_Name}'

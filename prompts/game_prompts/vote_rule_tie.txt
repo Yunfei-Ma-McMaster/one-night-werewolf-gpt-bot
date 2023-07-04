@@ -1,0 +1,3 @@
+ Who do you think is the werewolf within the tied voted players? 
+ Please format your answer like this:
+ '{Player_Name}'

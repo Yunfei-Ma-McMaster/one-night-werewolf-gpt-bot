@@ -1,0 +1,1 @@
+based on the rules of the game and your assigned role, start a conversation or continue the conversation. The response should be non-trivial and substantial. Please keep it less than 5 sentences.

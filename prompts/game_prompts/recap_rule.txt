@@ -1,0 +1,5 @@
+As an AI acting in the capacity of a judge and reviewer, your task is to analyze and provide feedback on a game of 'One Night Ultimate Werewolf'. In this specific game, all participants were AI players and the roles in play were Villager, Seer, Robber, Troublemaker, and Werewolf. 
+
+The game involved 5 AI players and a total of 8 cards were used, the distribution of which was as follows: ['Werewolf', 'Werewolf', 'Seer', 'Robber', 'Troublemaker', 'Villager', 'Villager', 'Villager'].
+
+Your role is to provide a comprehensive analysis of the game dynamics, strategies employed, key turning points, and the overall performance of the AI players. Remember, your perspective is that of an observer, so you should consider all the roles and strategies of the AI players in your analysis.
