@@ -1,7 +1,7 @@
 # one-night-werewolf-gpt-bot
 This project uses `gpt-4` to build agents to play one night werewolf automatically. 
 
-![werewolf_visual](https://github.com/Yunfei-Ma-McMaster/one-night-werewolf-gpt-bot/assets/95736471/063e8895-5c83-49eb-942d-a9ebecf5e340)
+![werewolf_visual](https://asciinema.org/a/dAOsQ0PO2V5EmPTmJco4435QH)
 
 ## Table of Contents
 
@@ -30,13 +30,15 @@ The primary aim of this project is to explore the ability of GPT-4 to deceive, r
 
 - **GPT-4 Powered:** Utilizing the state-of-the-art language model `gpt-4`, our bot is capable of sophisticated communication and strategic gameplay.
 
+- **Memory Management:**
+
 - **Automated Gameplay:** The bot can perform night actions, participate in three rounds of daytime conversation, and vote, providing a complete automated gameplay experience.
 
 - **Five AI Players:** With five AI players and three rounds of conversation during the day, the game becomes more unpredictable and exciting. 
 
 - **Versatile Roles:** Our AI players can play any roles in the game, be it a Villager, a Wolf, or a special character based on our written prompts.
 
-- **Adaptable Strategies:** The AI players adapt their strategies based on the game's context, leading to dynamic and intriguing game sessions. 
+
 
 
 

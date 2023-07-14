@@ -1,7 +1,7 @@
 The final voting results of the game is listed below: 
-Player AI_Player_C (Assigned Role : Troublemaker, Final Role : Troublemaker) has a vote of 0. 
- Player AI_Player_A (Assigned Role : Werewolf, Final Role : Werewolf) has a vote of 0. 
- Player AI_Player_E (Assigned Role : Robber, Final Role : Villager) has a vote of 0. 
- Player AI_Player_D (Assigned Role : Villager, Final Role : Villager) has a vote of 5. 
- Player AI_Player_B (Assigned Role : Villager, Final Role : Robber) has a vote of 0. 
+Player AI_Player_A (Assigned Role : Villager, Final Role : Villager) has a vote of 0. 
+ Player AI_Player_B (Assigned Role : Villager, Final Role : Villager) has a vote of 0. 
+ Player AI_Player_D (Assigned Role : Seer, Final Role : Seer) has a vote of 0. 
+ Player AI_Player_C (Assigned Role : Troublemaker, Final Role : Troublemaker) has a vote of 4. 
+ Player AI_Player_E (Assigned Role : Werewolf, Final Role : Werewolf) has a vote of 1. 
  The game result: Werewolf Team Win!!
