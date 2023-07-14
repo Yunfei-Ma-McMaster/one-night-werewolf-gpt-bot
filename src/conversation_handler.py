@@ -3,20 +3,44 @@ import json
 import os
 
 class ConversationHandler:
+    """
+    Handles the conversation and voting based on private and public information in game log(memory)
+    """
     def __init__(self):
         self.conversation = []
         self.players_day_conversation_path = os.path.join(".", "log", "day_public_conversation", "players_day_conversation.json")
         self._clear_conversation()
 
     def add_message(self, player_id, content):
+        """Add conversation message to the conversation history
+
+        Args:
+            player_id (int): AI player id number
+            content (string): Conversational message generative by gpt-4
+        """
         self.conversation.append({'player_id': player_id, 'content': content})
         self._save_conversation_to_file()
 
     def _save_conversation_to_file(self):
+        """save the conversation to the conversation history in log
+        """
         with open(self.players_day_conversation_path, 'w') as f:
             json.dump(self.conversation, f)
 
     def generate_response(self, player, total_rounds, round_number, count):
+        """
+        Constructs a prompt for an AI player's conversation in the game based on the current round and count.
+    
+        The conversation prompt includes the AI player's night action and the history of day conversations.
+        This provides the AI player with the context of which round and which count it is currently at in the game. 
+
+        The reponse is added to the conversation history during the day.
+        Args:
+            player (Player): The AI player for which the prompt is being constructed.
+            total_rounds (int): The total number of conversation rounds in the game.
+            round_number (int): The current round number in the game.
+            count (int): The current conversation count within the current round.
+        """
         messages = []
 
         # Get the game starting prompt
@@ -93,6 +117,15 @@ class ConversationHandler:
         print(f"{player.player_id}:" + response['choices'][0]['message']['content'] + "\n")
     
     def generate_vote(self, player):
+        """
+        Generate vote based on player's night actions and day conversations
+
+        Args:
+            player (Player): The AI player
+
+        Returns:
+            str: The player's name
+        """
         messages = []
         # Get the game starting prompt
         game_rule_file_path = os.path.join('.', 'prompts', 'game_prompts', 'game_rule.txt')
@@ -120,7 +153,7 @@ class ConversationHandler:
         messages.append({
             "role": "assistant",
             "name": player.player_id,
-            "content": night_actions.get(player.player_id, '') ##?? test if it is right
+            "content": night_actions.get(player.player_id, '') 
         })
 
         # Get the conversation history
@@ -166,6 +199,17 @@ class ConversationHandler:
         return voted_player
     
     def generate_vote_tie(self, player, tie_players_ids, combined_vote_message):
+        """
+        This is a backup function to regenerate vote if there is a tie
+
+        Args:
+            player (Player): The AI player
+            tie_players_ids (list<str>): The list of tied players' ids last round
+            combined_vote_message (string): The combined voted message last round
+
+        Returns:
+            str: The voted player's name
+        """
         messages = []
         # Get the game starting prompt
         game_rule_file_path = os.path.join('.', 'prompts', 'game_prompts', 'game_rule.txt')
@@ -241,6 +285,12 @@ class ConversationHandler:
         return voted_player
     
     def game_recap(self):
+        """
+        Generate a game recap with a birds eye view on all the information avaiable
+
+        Returns:
+            str: The comprehensive recap of the game
+        """
         messages = []
         # Get the game starting prompt
         recap_rule_path = os.path.join('.', 'prompts', 'game_prompts', 'recap_rule.txt')
@@ -313,5 +363,8 @@ class ConversationHandler:
 
     
     def _clear_conversation(self):
+        """
+        Clear the conversation history
+        """
         with open(self.players_day_conversation_path, 'w') as file:
             json.dump([], file)
