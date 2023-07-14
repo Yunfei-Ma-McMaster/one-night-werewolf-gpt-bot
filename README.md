@@ -1,7 +1,7 @@
 # one-night-werewolf-gpt-bot
 This project uses `gpt-4` to build agents to play one night werewolf automatically. 
 
-[![asciicast](https://asciinema.org/a/596808.svg)](https://asciinema.org/a/596808)
+![werewolf-visual](./assets/werewolf_visual.mp4)
 
 ## Table of Contents
 
