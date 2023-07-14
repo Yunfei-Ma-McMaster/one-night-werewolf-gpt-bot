@@ -1,7 +1,7 @@
 # one-night-werewolf-gpt-bot
 This project uses `gpt-4` to build agents to play one night werewolf automatically. 
 
-![werewolf_visual](https://asciinema.org/a/dAOsQ0PO2V5EmPTmJco4435QH)
+[![asciicast](https://asciinema.org/a/596808.svg)](https://asciinema.org/a/596808)
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ The primary aim of this project is to explore the ability of GPT-4 to deceive, r
 
 - **GPT-4 Powered:** Utilizing the state-of-the-art language model `gpt-4`, our bot is capable of sophisticated communication and strategic gameplay.
 
-- **Memory Management:**
+- **Memory Management:** Building a simple memory mechanism ([log](./log)) for LLM store in to manage public and private information available to AI players at different stages of the game. 
 
 - **Automated Gameplay:** The bot can perform night actions, participate in three rounds of daytime conversation, and vote, providing a complete automated gameplay experience.
 
@@ -85,7 +85,7 @@ This will initiate the One Night Werewolf AI Bots, starting the game with five A
 
 Please note: this is a command-line game. All game progress will take place in your terminal or command prompt.
 
-All the prompts are stored in `./prompt` and all the game logs are stored in `./log` including the night actions, the day conversation, voting, and game recap.
+All the prompts are stored in [`./prompt`](./prompts/) and all the game memory (logs) are stored in [`./log`](./log/) including the night actions, the day conversation, voting, and game recap.
 
 
 ## Contributing
